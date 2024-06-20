@@ -1,0 +1,91 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    max-width: 250px; /* Daha büyük logo boyutu */
+}
+
+.menu {
+    position: absolute;
+    top: calc(5% + 250px); /* Logo yüksekliği */
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.menu a {
+    display: block;
+    margin: 10px 0; /* Menü öğeleri arasında daha fazla boşluk */
+    padding: 10px 30px; /* Daha küçük boyutlar */
+    font-size: 1em; /* Daha küçük metin boyutu */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 165, 0, 0.8); /* Hover rengi turuncu */
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .logo {
+        top: 2%;
+    }
+
+    .logo img {
+        max-width: 150px; /* Küçük ekranlar için daha küçük logo */
+    }
+
+    .menu {
+        top: calc(2% + 150px); /* Küçük ekranlar için logo yüksekliği */
+    }
+
+    .menu a {
+        margin: 8px 0; /* Menü öğeleri arasında daha fazla boşluk */
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo img {
+        max-width: 100px; /* Daha küçük ekranlar için daha küçük logo */
+    }
+
+    .menu {
+        top: calc(2% + 100px); /* Daha küçük ekranlar için logo yüksekliği */
+    }
+
+    .menu a {
+        margin: 6px 0; /* Menü öğeleri arasında daha fazla boşluk */
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+}
